@@ -1,0 +1,38 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Hyperfin Test</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <button class="btn btn-primary" id="button">Reload the partial</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12" id="view"></div>
+    </div>
+  </div>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+  <script>
+    var doc = $(document);
+
+    doc.ready(function () {
+      var button = $('#button'),
+          view = $('#view');
+
+      button.click(function () {
+        view.load('partial.html', function () {
+          doc.bind('polymer-ready', function () {
+            doc.unbind('polymer-ready');
+
+            
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
