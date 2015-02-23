@@ -1,0 +1,20 @@
+{
+  "name": "hypergrid-rerender-test",
+  "version": "0.0.0",
+  "homepage": "https://github.com/ahmednuaman/hypergrid-rerender-test",
+  "authors": [
+    "Ahmed Nuaman <ahmed@ahmednuaman.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fin-hypergrid": "#master",
+    "jquery": "~2.1.3"
+  }
+}
