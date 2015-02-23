@@ -56,7 +56,8 @@
     doc.ready(function () {
       var buttonDelete = $('#button-delete'),
           buttonLoad = $('#button-load'),
-          view = $('#view');
+          view = $('#view'),
+          hypergrid;
 
       buttonDelete.click(function () {
         view.empty();
@@ -64,17 +65,13 @@
 
       buttonLoad.click(function () {
         view.load('partial.html', function () {
-          doc.bind('polymer-ready', function () {
-            doc.unbind('polymer-ready');
-
-            populateHypergrid();
-          });
+          hypergrid = $('fin-hypergrid')[0];
+          hypergrid.onload = populateHypergrid;
         });
       });
 
       function populateHypergrid () {
-        var hypergrid = $('fin-hypergrid')[0],
-            hypergridModel = hypergrid.getBehavior();
+        var hypergridModel = hypergrid.getBehavior();
 
         hypergridModel.setHeaders(data.cols);
         hypergridModel.setFields(data.cols);

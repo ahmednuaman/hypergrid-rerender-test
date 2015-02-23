@@ -28,11 +28,11 @@
     "polymer": "Polymer/polymer#0.5.4",
     "accountingjs": "~0.3.2"
   },
-  "_release": "1972e6854b",
+  "_release": "98209c6102",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "1972e6854b6f25b855761f02c8d8e9e0b0b587b5"
+    "commit": "98209c61020513f7cf5e99f4880d7f9b904bb01d"
   },
   "_source": "git://github.com/openfin/fin-hypergrid.git",
   "_target": "master",
